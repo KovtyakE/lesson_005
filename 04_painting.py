@@ -23,20 +23,26 @@ from package_004.rainbow import rainbow_paint
 from package_004.smile import smile_paint
 from package_004.tree import tree_paint
 from package_004.wall import wall_paint
+from package_004.sun import sun_paint
+from package_004.snowfall import snowfall_paint
 
 sd.set_screen_size(1500, 750)
-sd.background_color = (0, 0, 0)
-
+sd.background_color = (0, 191, 255)
 
 rainbow_paint()
-
-smile_paint()
 
 tree_paint()
 
 wall_paint()
 
+smile_paint()
+
+sun_paint()
+
+snowfall_paint()
+
 sd.pause()
+
 # Усложненное задание (делать по желанию)
 # Анимировать картину.
 # Пусть слева идет снегопад, радуга переливается цветами, смайлик моргает, солнце крутит лучами, етс.

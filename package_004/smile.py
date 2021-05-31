@@ -6,8 +6,11 @@ import simple_draw as sd
 # функция отрисовки смайлика по заданным координатам и заданного цвета
 def smile_paint():
     color = sd.random_color()
-    x = randint(50, 1450)
-    y = randint(50, 700)
+    while color == (sd.COLOR_ORANGE or sd.COLOR_DARK_RED or sd.COLOR_DARK_YELLOW
+                    or sd.background_color or (100, 100, 100)):
+        color = sd.random_color()
+    x = 600
+    y = 200
     point = sd.Point(x, y)
     sd.circle(point, 50, color, 3)
     nose_left = sd.Point(x - 6, y - 5)

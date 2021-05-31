@@ -6,7 +6,16 @@ import simple_draw as sd
 def wall_paint():
     # счетчик для определения сдвига, нужно ли сдвигать начало и конец вертикальной линии
     count = 0
-    for y in range(-35, 400, 50):
+    triangle_points = [
+        sd.get_point(350, 380),
+        sd.get_point(850, 380),
+        sd.get_point(600, 550)
+    ]
+    print(type(triangle_points))
+    sd.square(sd.get_point(400, 0), 400, sd.COLOR_ORANGE, width=0)
+    sd.square(sd.get_point(400, 0), 400, (100, 100, 100), width=5)
+
+    for y in range(0, 400, 50):
         # левый край экрана
         point = sd.Point(400, y)
         # правый край экрана
@@ -26,3 +35,9 @@ def wall_paint():
                 point = sd.Point(x + 50, y)
                 endpoint = sd.Point(x + 50, y + 50)
                 sd.line(point, endpoint, color=(100, 100, 100), width=5)
+    sd.square(sd.get_point(500, 100), 200, sd.COLOR_DARK_YELLOW, width=0)
+    sd.square(sd.get_point(500, 100), 200, (100, 100, 100), width=5)
+    sd.polygon(triangle_points, sd.COLOR_DARK_RED, 0)
+
+
+
